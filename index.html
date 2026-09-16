@@ -621,35 +621,35 @@
 
   var EXERCISES = {
     /* ---------- Día A (lunes) ---------- */
-    squat:    { name:"Sentadilla libre", en:"Back Squat", patron:"Rodilla (bilateral)", musculos:"Cuádriceps, glúteo, core", icon:"squat", loaded:true,
+    squat:    { name:"Sentadilla libre", en:"Back Squat", patron:"Rodilla (bilateral)", musculos:"Cuádriceps, glúteo, core", icon:"squat", loaded:true, incrementoKg:2.5,
       cues:["Barra apoyada sobre la espalda alta, agarre firme y codos abajo","Pecho alto, rodillas siguen la dirección de los pies","Baja hasta donde controles la espalda neutra y empuja el piso con toda la planta al subir","Cerca del máximo, un compañero o las barras de seguridad del rack: nunca un intento pesado sin resguardo"] },
-    bench:    { name:"Press de banca con barra", en:"Barbell Bench Press", patron:"Empuje horizontal", musculos:"Pectoral, tríceps, deltoide anterior", icon:"pushh", loaded:true,
+    bench:    { name:"Press de banca con barra", en:"Barbell Bench Press", patron:"Empuje horizontal", musculos:"Pectoral, tríceps, deltoide anterior", icon:"pushh", loaded:true, incrementoKg:2.5,
       cues:["Omóplatos retraídos y fijos en el banco, pies firmes en el suelo","Baja la barra a la altura del pecho bajo, controlada","Empuja sin bloquear el codo de golpe","No marcaste pecho como objetivo: este ejercicio está por el equilibrio empuje/tracción del hombro, y por eso se queda en hipertrofia todo el programa"] },
-    row:      { name:"Remo con mancuerna a un brazo", en:"One-Arm Dumbbell Row", patron:"Tracción horizontal", musculos:"Dorsal, romboides, bíceps", icon:"pullh", loaded:true,
+    row:      { name:"Remo con mancuerna a un brazo", en:"One-Arm Dumbbell Row", patron:"Tracción horizontal", musculos:"Dorsal, romboides, bíceps", icon:"pullh", loaded:true, incrementoKg:2.5,
       cues:["Espalda neutra, mano y rodilla apoyadas en el banco","Codo hacia atrás, pegado al torso, no hacia afuera","Controla la fase excéntrica","Es el remo que entra al ladder fuerza: a un brazo, con apoyo, la lumbar no participa"] },
-    curl:     { name:"Curl de bíceps con mancuernas", en:"Dumbbell Bicep Curl", patron:"Aislado — codo", musculos:"Bíceps", icon:"curl", loaded:true, safety:"aislamiento",
+    curl:     { name:"Curl de bíceps con mancuernas", en:"Dumbbell Bicep Curl", patron:"Aislado — codo", musculos:"Bíceps", icon:"curl", loaded:true, incrementoKg:2.5, safety:"aislamiento",
       cues:["Codos fijos junto al torso","Sin balanceo del cuerpo para impulsar el peso","Controla la bajada (2–3 segundos)"] },
     hangraise:{ name:"Elevación de piernas colgada", en:"Hanging Leg Raise", patron:"Core (flexión de cadera y tronco)", musculos:"Recto abdominal, flexores de cadera", icon:"core", loaded:false,
       cues:["Colgada de la barra con agarre firme — la escalada te da ventaja acá, aprovéchala","Sube las piernas sin balancear: si el cuerpo oscila, la repetición no cuenta","Baja lento, sin dejarlas caer","Marcaste abdomen en fuerza: en este ejercicio la fuerza se gana estirando la palanca (rodillas → piernas rectas), no con kilos"],
       bw:{1:{sets:3,variante:"Rodillas al pecho",dosis:"10–12 reps"}, 2:{sets:3,variante:"Rodillas al pecho, con pausa de 1 seg arriba",dosis:"12 reps"}, 3:{sets:4,variante:"Piernas semiestiradas",dosis:"8–10 reps, bajada de 3 seg"}, 4:{sets:4,variante:"Piernas rectas hasta la horizontal",dosis:"8–10 reps"}} },
 
     /* ---------- Día B (jueves) ---------- */
-    rdl:      { name:"Peso muerto rumano con barra", en:"Barbell Romanian Deadlift", patron:"Bisagra de cadera", musculos:"Isquiotibiales, glúteo, lumbar", icon:"hinge", loaded:true, safety:"bisagra", capFuerza:93,
+    rdl:      { name:"Peso muerto rumano con barra", en:"Barbell Romanian Deadlift", patron:"Bisagra de cadera", musculos:"Isquiotibiales, glúteo, lumbar", icon:"hinge", loaded:true, incrementoKg:2.5, safety:"bisagra", capFuerza:93,
       cues:["Barra pegada a las piernas todo el recorrido","Bisagra desde la cadera, espalda neutra, pecho por delante de la cadera","Rodillas con flexión mínima y fija","Baja hasta donde la espalda se mantenga plana — el rango lo pone tu isquiotibial, no el suelo"] },
-    ohp:      { name:"Press militar con barra", en:"Barbell Overhead Press", patron:"Empuje vertical", musculos:"Deltoides, tríceps", icon:"pushv", loaded:true,
+    ohp:      { name:"Press militar con barra", en:"Barbell Overhead Press", patron:"Empuje vertical", musculos:"Deltoides, tríceps", icon:"pushv", loaded:true, incrementoKg:2.5,
       cues:["Core apretado y glúteos firmes, sin arquear la lumbar","La barra sube en línea recta, la cabeza pasa por debajo al final","Exhala al empujar arriba","Hombros los marcaste en fuerza e hipertrofia a la vez: cuando da igual, el plan elige hipertrofia — más volumen en el hombro y menos estrés en la articulación"] },
-    latpull:  { name:"Jalón al pecho", en:"Lat Pulldown", patron:"Tracción vertical", musculos:"Dorsal, bíceps", icon:"pullv", loaded:true,
+    latpull:  { name:"Jalón al pecho", en:"Lat Pulldown", patron:"Tracción vertical", musculos:"Dorsal, bíceps", icon:"pullv", loaded:true, incrementoKg:5,
       cues:["Pecho alto, leve inclinación hacia atrás","Barra hacia la clavícula, no hacia el cuello","Controla el regreso, no dejes caer el peso","Este es el ejercicio donde medir tu 1RM de tracción vertical: la dominada del sábado progresa por nivel, no por kilos"] },
-    wristcurl:{ name:"Curl de muñeca con mancuerna", en:"Dumbbell Wrist Curl", patron:"Aislado — muñeca", musculos:"Flexores y extensores del antebrazo", icon:"wrist", loaded:true, safety:"aislamiento",
+    wristcurl:{ name:"Curl de muñeca con mancuerna", en:"Dumbbell Wrist Curl", patron:"Aislado — muñeca", musculos:"Flexores y extensores del antebrazo", icon:"wrist", loaded:true, incrementoKg:2.5, safety:"aislamiento",
       cues:["Antebrazo apoyado en el muslo o en un banco, solo se mueve la muñeca","Sube y baja con control, sin usar el codo para impulsar","Haz siempre las dos versiones: palma arriba y palma abajo — la escalada carga los flexores; los extensores son los que equilibran el codo"] },
     plank:    { name:"Plancha progresiva", en:"Plank (progression)", patron:"Core (anti-extensión)", musculos:"Recto abdominal, transverso", icon:"core", loaded:false,
       cues:["Línea recta de hombro a talón","Glúteos y abdomen activos, cadera ni arriba ni caída","Respira, no aguantes el aire","La progresión es de palanca: del antebrazo a la rueda, no de segundos infinitos"],
       bw:{1:{sets:3,variante:"Antebrazos apoyados",dosis:"40–50 seg"}, 2:{sets:3,variante:"Brazos extendidos, con toques de hombro alternados",dosis:"12 toques por lado"}, 3:{sets:3,variante:"Antebrazos apoyados, pies elevados en un banco",dosis:"40–50 seg"}, 4:{sets:3,variante:"Rueda abdominal de rodillas",dosis:"8–10 reps, vuelta de 3 seg"}} },
 
     /* ---------- Día C (sábado) ---------- */
-    hipthrust:{ name:"Hip thrust con barra", en:"Barbell Hip Thrust", patron:"Extensión de cadera", musculos:"Glúteo", icon:"hipext", loaded:true,
+    hipthrust:{ name:"Hip thrust con barra", en:"Barbell Hip Thrust", patron:"Extensión de cadera", musculos:"Glúteo", icon:"hipext", loaded:true, incrementoKg:2.5,
       cues:["Barra sobre la cadera, usa protector/almohadilla","Mentón metido, sin hiperextender la lumbar arriba","Aprieta el glúteo con fuerza en el tope y baja controlado","Marcaste glúteo en fuerza: este es el ejercicio que lleva ese ladder, porque la cadera tolera bien el trabajo cercano al máximo en este patrón"] },
-    bulgarian:{ name:"Sentadilla búlgara", en:"Bulgarian Split Squat", patron:"Rodilla (unilateral)", musculos:"Cuádriceps, glúteo", icon:"squat", loaded:true,
+    bulgarian:{ name:"Sentadilla búlgara", en:"Bulgarian Split Squat", patron:"Rodilla (unilateral)", musculos:"Cuádriceps, glúteo", icon:"squat", loaded:true, incrementoKg:2.5,
       cues:["Pie trasero elevado en un banco, apoyo solo en la punta del pie","Tronco erguido, la rodilla delantera desciende en línea con el pie de apoyo","Mancuernas a los costados, controla la bajada","Se queda en hipertrofia todo el programa: la fuerza de cuádriceps la lleva la sentadilla libre del lunes — a una pierna, el trabajo de 1–3 reps cerca del máximo cuesta más en equilibrio que en fuerza"] },
     pullup:   { name:"Dominada progresiva", en:"Pull-Up (progression)", patron:"Tracción vertical", musculos:"Dorsal, bíceps, antebrazo", icon:"pullv", loaded:false,
       cues:["Agarre algo más ancho que los hombros, cuelga con los hombros activos (no encogidos hacia las orejas)","Sube llevando el pecho a la barra, codos hacia abajo y atrás","Baja completa y controlada: la colgada larga al final de cada repetición también es entrenamiento de agarre","Progresa quitando ayuda o sumando lastre, nunca acortando el rango"],
@@ -920,7 +920,40 @@
       var n = (guardado>=1 && guardado<=4) ? guardado : blockId;
       return e.bw[n] ? n : blockId;
     }
-    return { LADDER: LADDER, fuerzaTopForWeek: fuerzaTopForWeek, ladderRungsFor: ladderRungsFor, nivelActual: nivelActual, round5: round5 };
+    // Agrupa rungs consecutivos que redondean al mismo kg real (mismo
+    // incrementoKg y mismo 1RM) — evita mostrar el mismo peso varias veces
+    // como si fueran objetivos distintos cuando el equipo no ajusta tan fino.
+    // Ver docs/superpowers/specs/2026-09-16-prescripcion-pesos-ajustables-design.md §3.4.
+    function rungGroupsFor(exId, rungs, rmOverride){
+      var groups = [];
+      rungs.forEach(function(r, i){
+        var kg = OneRM.kgLabel(exId, r.pct, rmOverride);
+        var last = groups[groups.length-1];
+        if(last && kg!=="—" && last.kg===kg){
+          last.rungs.push(r);
+          last.idxs.push(i);
+        } else {
+          groups.push({ kg:kg, rungs:[r], idxs:[i] });
+        }
+      });
+      return groups;
+    }
+    // True si el tope de fuerza de esta semana redondea al mismo kg real que
+    // el de la semana anterior del mismo bloque — el % nominal sube pero el
+    // peso ajustable no cambia. Ver §3.5 del spec de pesos ajustables.
+    function weeklyTopIsFlat(exId, week, rmOverride){
+      if(week<=1) return false;
+      var thisBlock = Schedule.blockForWeek(week);
+      var prevBlock = Schedule.blockForWeek(week-1);
+      if(thisBlock.id !== prevBlock.id) return false;
+      var exCap = (EXERCISES[exId] && EXERCISES[exId].capFuerza) || 100;
+      var topThis = Math.min(fuerzaTopForWeek(week), exCap);
+      var topPrev = Math.min(fuerzaTopForWeek(week-1), exCap);
+      var kgThis = OneRM.kgLabel(exId, topThis, rmOverride);
+      var kgPrev = OneRM.kgLabel(exId, topPrev, rmOverride);
+      return kgThis!=="—" && kgThis===kgPrev;
+    }
+    return { LADDER: LADDER, fuerzaTopForWeek: fuerzaTopForWeek, ladderRungsFor: ladderRungsFor, nivelActual: nivelActual, round5: round5, rungGroupsFor: rungGroupsFor, weeklyTopIsFlat: weeklyTopIsFlat };
   })();
 
   var OneRM = (function(){
@@ -930,10 +963,16 @@
       var v = parseFloat(el.value);
       return isNaN(v) ? null : v;
     }
-    function kgLabel(id, pct){
-      var rm = getRM(id);
+    // Redondea siempre hacia abajo al incremento real de equipo del ejercicio
+    // (EXERCISES[id].incrementoKg) — nunca al 0.5kg que daba Progression.round5().
+    // rmOverride es opcional (uso de scripts/verify-weights.js); en el plan real
+    // siempre se omite y se usa el 1RM guardado por el estudiante.
+    function kgLabel(id, pct, rmOverride){
+      var rm = (rmOverride===undefined || rmOverride===null) ? getRM(id) : rmOverride;
       if(rm===null || rm<=0) return "—";
-      return Progression.round5(rm*pct/100).toFixed(1).replace(/\.0$/,"") + " kg";
+      var inc = (EXERCISES[id] && EXERCISES[id].incrementoKg) || 2.5;
+      var kg = Math.floor((rm*pct/100) / inc) * inc;
+      return kg.toFixed(1).replace(/\.0$/,"") + " kg";
     }
     return { getRM: getRM, kgLabel: kgLabel };
   })();
@@ -1198,12 +1237,25 @@
       document.getElementById("weekBanners").innerHTML = html;
     }
 
-    function rungRowHTML(exId, ladderType, rung, idx, storageKey){
+    // Fila de una o más series fusionadas (mismo kg real tras redondear al
+    // incremento del ejercicio). Con un solo rung se ve igual que antes; con
+    // varios, muestra el rango de series/reps/% y un solo checkbox de "hecho"
+    // para el bloque completo. Ver §3.4 del spec de pesos ajustables.
+    function rungGroupRowHTML(exId, group, programDay){
+      var idxs = group.idxs;
+      var first = idxs[0], last = idxs[idxs.length-1];
+      var storageKey = "chk_pd"+programDay+"_"+exId+"_"+first+(last!==first ? ("-"+last) : "");
       var checked = Storage.lsGet(storageKey) === "1";
+      var serieLabel = (idxs.length===1) ? ("Serie "+(first+1)) : ("Series "+(first+1)+"-"+(last+1));
+      var repsLo = group.rungs[0].reps, repsHi = group.rungs[group.rungs.length-1].reps;
+      var repsMin = Math.min(repsLo, repsHi), repsMax = Math.max(repsLo, repsHi);
+      var repsLabel = (repsMin===repsMax) ? (repsMin+" reps") : (repsMin+"-"+repsMax+" reps");
+      var pctLo = group.rungs[0].pct, pctHi = group.rungs[group.rungs.length-1].pct;
+      var pctLabel = (pctLo===pctHi) ? (pctLo+"% 1RM") : (pctLo+"-"+pctHi+"% 1RM");
       return '<label class="rung-row'+(checked?" is-done":"")+'" data-chk-key="'+storageKey+'">'+
         '<input type="checkbox" class="rung-check"'+(checked?" checked":"")+'>'+
-        '<span class="rung-reps">Serie '+(idx+1)+' · '+rung.reps+' reps <span class="rung-pct">('+rung.pct+'% 1RM)</span></span>'+
-        '<span class="rung-kg" data-rm-cell="'+exId+'" data-pct="'+rung.pct+'">—</span>'+
+        '<span class="rung-reps">'+serieLabel+' · '+repsLabel+' <span class="rung-pct">('+pctLabel+')</span></span>'+
+        '<span class="rung-kg" data-rm-cell="'+exId+'" data-pct="'+pctLo+'">'+group.kg+'</span>'+
       '</label>';
     }
 
@@ -1238,9 +1290,9 @@
       } else {
         var rm = OneRM.getRM(row.id);
         var rungs = (row.ladder==="fuerza") ? Progression.ladderRungsFor(row.id, row.ladder, weekTopPct) : Progression.LADDER[row.ladder];
-        var rows = rungs.map(function(r,i){
-          var key = "chk_pd"+programDay+"_"+row.id+"_"+i;
-          return rungRowHTML(row.id, row.ladder, r, i, key);
+        var groups = Progression.rungGroupsFor(row.id, rungs, rm);
+        var rows = groups.map(function(g){
+          return rungGroupRowHTML(row.id, g, programDay);
         }).join("");
         body = rows;
         if(rm===null){
@@ -1305,7 +1357,11 @@
         // baja al cap). Los ejercicios con un cap propio por debajo de ese tope se
         // listan aparte — antes el banner tomaba el mínimo de los caps y decía
         // "93%" en un día donde otro ejercicio sí llegaba a 99%.
-        var displayTop = weekTop, maxCap = 0, capped = [];
+        // anyFlat: si el tope de esta semana redondea al mismo kg real que el de
+        // la semana anterior del mismo bloque para algún ejercicio, el % nominal
+        // sube pero el equipo no tiene ajuste más fino — se avisa en vez de
+        // dejarlo mudo.
+        var displayTop = weekTop, maxCap = 0, capped = [], anyFlat = false;
         if(day.ladderTag==="fuerza"){
           day.ej.forEach(function(row){
             if(row.ladder==="fuerza"){
@@ -1318,10 +1374,12 @@
             if(row.ladder==="fuerza"){
               var exCap2 = (EXERCISES[row.id] && EXERCISES[row.id].capFuerza) || 100;
               if(exCap2 < displayTop) capped.push(EXERCISES[row.id].name.toLowerCase()+" se detiene en "+exCap2+"%");
+              if(Progression.weeklyTopIsFlat(row.id, week, OneRM.getRM(row.id))) anyFlat = true;
             }
           });
         }
-        var waveNote = (day.ladderTag==="fuerza") ? ' <span style="color:var(--ink-3); font-weight:400;">· tope de hoy '+displayTop+'% 1RM'+(capped.length?" · "+capped.join(", "):"")+'</span>' : "";
+        var flatNote = anyFlat ? ' <span style="color:var(--accent); font-weight:400;">· el peso no cambia esta semana porque tu equipo no ajusta más fino acá — igual progresas: se pide una repetición menos con el mismo peso</span>' : "";
+        var waveNote = (day.ladderTag==="fuerza") ? ' <span style="color:var(--ink-3); font-weight:400;">· tope de hoy '+displayTop+'% 1RM'+(capped.length?" · "+capped.join(", "):"")+'</span>'+flatNote : "";
         mount.innerHTML = '<div class="wk-card"><div class="section-kicker" style="margin-top:14px;">'+day.short+waveNote+'</div>'+cards+'</div>';
       }
 
